@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n;
+
+    cout << "Write the length of the array: ";
+    cin >> n;
+
+    int arr[n];
+
+    cout << "Enter the elements of the array: " << endl;
+
+    for(int i = 0; i < n; i++)
+    {
+        cin >> arr[i];
+    }
+
+    int search;
+
+    cout << "Enter the element to search: ";
+    cin >> search;
+
+    int flag = 0;
+
+    for(int i = 0; i < n; i++)
+    {
+        if(arr[i] == search)
+        {
+            cout << "Element found at index " << i;
+            flag = 1;
+            break;
+        }
+    }
+
+    if(flag == 0)
+    {
+        cout << "Element not found";
+    }
+
+    return 0;
+}
